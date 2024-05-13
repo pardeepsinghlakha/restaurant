@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const db = require("./db");
-const userRouter = require("./routes/userRoutes.js");
+const userRouter = require("./routes/userRouters.js");
 const menuItemRouter = require("./routes/menuItemRouters.js");
 const bodyParser = require("body-parser");
 require("dotenv").config();
