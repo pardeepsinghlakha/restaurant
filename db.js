@@ -2,10 +2,13 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 //Define mongo db URI
-const DATABASE_NAME = process.env.DATABASE_NAME;
+
 // const database_URI_Local = process.env.DATABASE_URI_LOCAL;
 const database_URI_Online = process.env.DATABASE_URI_ONLINE;
-mongoose.connect(database_URI_Online);
+mongoose.connect(database_URI_Online, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const db = mongoose.connection;
 db.on("connected", () => {

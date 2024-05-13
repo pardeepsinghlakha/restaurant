@@ -1,6 +1,6 @@
-const db = require("./db");
 const express = require("express");
 const app = express();
+const db = require("./db");
 const userRouter = require("./routes/userRoutes.js");
 const menuItemRouter = require("./routes/menuItemRouters.js");
 const bodyParser = require("body-parser");
