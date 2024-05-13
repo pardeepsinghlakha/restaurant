@@ -11,7 +11,11 @@ var _ = require("lodash");
 
 app.use("/user", userRouter);
 app.use("/", menuItemRouter);
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3000;
+
+app.get("/", function (req, res) {
+  res.send("Welcome to our Restaurent");
+});
 app.listen(PORT, () => {
   console.log("Server is Running & Listening on port no " + PORT);
 });
