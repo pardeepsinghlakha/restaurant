@@ -1,9 +1,15 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
 //Define mongo db URI
-database_URL = "mongodb://localhost:27017/restaurant";
-
-mongoose.connect(database_URL);
+const DATABASE_NAME = process.env.DATABASE_NAME;
+//const DATABASE_PASSWORD = process.env.DATABASE_PASSWORD;
+// const database_URI_Local = process.env.DATABASE_URI_LOCAL;
+const database_URI_Online = process.env.DATABASE_URI_ONLINE;
+mongoose.connect(database_URI_Online, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const db = mongoose.connection;
 db.on("connected", () => {
