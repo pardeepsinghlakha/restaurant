@@ -27,7 +27,15 @@ const userScheema = new mongoose.Schema({
   },
   salary: {
     type: Number,
-    reuired: true,
+    required: true,
+  },
+  username: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
   },
 });
 // Create a models

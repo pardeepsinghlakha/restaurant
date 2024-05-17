@@ -5,7 +5,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 
 // Retrieving the MongoDB URI from environment variables
-const databaseURI = process.env.DATABASE_URI_ONLINE;
+const databaseURI = process.env.DATABASE_URI_LOCAL;
 
 // Connecting to MongoDB using the provided URI
 mongoose.connect(databaseURI);
